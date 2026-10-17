@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Läs och lämna recensioner för Pomodoro Pizzeria.">
 	<meta name="author" content="Hanna Vigren">
+	<meta name="keywords" content="recensioner, omdömen, kundbetyg">
 	<title>Recensioner - Pomodoro Pizzeria</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 	<header>
 		<nav>
 			<ul>
 				<li><a href="index.html"><img src="logo.png" alt="Pomodoro Pizzeria" class="logo"></a></li>
-				<li><a href="index.html">Hem</a></li>
-				<li><a href="meny.html">Meny</a></li>
-				<li><a href="omoss.html">Om oss</a></li>
-				<li><a href="bestall.html">Beställ</a></li>
-				<li><a href="recensioner.html">Recensioner</a></li>
+				<li><a href="index.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Hem</a></li>
+				<li><a href="meny.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Meny</a></li>
+				<li><a href="omoss.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Om oss</a></li>
+				<li><a href="bestall.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Beställ</a></li>
+				<li><a href="recensioner.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Recensioner</a></li>
 			</ul>
 		</nav>
 	</header>
-
 	<main>
 		<h1>Recensioner</h1>
+		<p>Här kan du läsa vad våra kunder tycker om oss och lämna din egen recension.</p>
 		<table>
 			<thead>
 				<tr>
 					<th>Namn</th>
+					<th>Betyg</th>
 					<th>Recension</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>Anna</td>
-					<td>Bästa pizzan i stan!</td>
+					<td>Anna Svensson</td>
+					<td>★★★★★</td>
+					<td>Bästa pizzan i stan! Autentisk italiensk smak och färska ingredienser. Rekommenderar varmt!</td>
 				</tr>
 				<tr>
-					<td>Erik</td>
-					<td>Snabb och trevlig service.</td>
+					<td>Erik Johansson</td>
+					<td>★★★★☆</td>
+					<td>Snabb och trevlig service. Pizzan var riktigt bra, speciellt Vesuvio. Enda minuset är att det kan vara lite trångt vid lunchtid.</td>
+				</tr>
+				<tr>
+					<td>Maria Andersson</td>
+					<td>★★★★★</td>
+					<td>Fantastisk glutenfri pizza! Som celiakpatient är det svårt att hitta bra pizza, men här får jag samma kvalitet som alla andra.</td>
+				</tr>
+				<tr>
+					<td>Lars Nilsson</td>
+					<td>★★★★☆</td>
+					<td>Mycket bra pizza och rimliga priser. Personalen är alltid vänlig och hjälpsam. Kommer definitivt tillbaka!</td>
 				</tr>
 			</tbody>
 		</table>
-
 		<form action="mailto:recensioner@pomodoro.se" method="post" enctype="text/plain">
 			<label for="namn">Namn:</label>
-			<input type="text" id="namn" name="namn" required>
+			<input type="text" id="namn" name="namn" onfocus="focusInput(this)" onblur="blurInput(this)" required>
 			<label for="recension">Din recension:</label>
-			<textarea id="recension" name="recension" required></textarea>
+			<textarea id="recension" name="recension" onfocus="focusInput(this)" onblur="blurInput(this)" required></textarea>
 			<button type="submit">Skicka</button>
 		</form>
 	</main>
-
 	<footer>
-		<p>&copy; 2025 Pomodoro Pizzeria</p>
+		<p>&copy; 2026 Pomodoro Pizzeria</p>
 	</footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
