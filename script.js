@@ -45,7 +45,9 @@ function blurInput(element) {
 }
 
 // Uppgift 4: jQuery-funktioner
-$(document).ready(function() { // 4.1: fadeTo()$(".pizza-image").hover(
+$(document).ready(function() { 
+    // 4.1: fadeTo()
+    $(".pizza-image").hover(
         function() {
             $(this).fadeTo("fast", 0.6);
         },
