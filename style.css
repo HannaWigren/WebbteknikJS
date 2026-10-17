@@ -1,8 +1,13 @@
-/* Globala stilar */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    color: #333;
 }
 
 header {
@@ -10,6 +15,10 @@ header {
     color: white;
     padding: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -24,6 +33,7 @@ nav a {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .logo {
@@ -34,10 +44,16 @@ nav a {
 footer {
     background-color: #eee;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
 }
 
-/* Gemensamma stilar */
+main {
+    min-height: calc(100vh - 200px);
+    padding: 20px 0;
+}
+
 main h1 {
     text-align: center;
     font-size: 32px;
@@ -59,7 +75,6 @@ form {
     margin: 20px auto;
 }
 
-/* index.html */
 .hero {
     text-align: center;
     margin: 20px auto;
@@ -92,21 +107,47 @@ form {
 .pizza-image {
     width: 100%;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
-.pizza-item {
-    margin: 0; 
+.info-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
     text-align: center;
 }
 
-.pizza-item figcaption {
-    margin-top: 8px;
-    font-weight: bold;
-    font-size: 16px;
+.info-section h2 {
+    font-size: 24px;
+    margin: 30px 0 15px 0;
     color: #2c3e50;
 }
 
-/* meny.html */
+.info-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.info-section li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.info-section p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-section a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+}
+
 .menu-group {
     display: flex;
     justify-content: space-around;
@@ -126,7 +167,6 @@ form {
 .menu-column ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
 .menu-column li {
@@ -138,7 +178,35 @@ form {
     font-size: 18px;
 }
 
-/* bestall.html */
+.other-menu {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.other-menu h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.other-menu h3 {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    color: #2c3e50;
+}
+
+.other-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.other-menu li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
 form label {
     font-size: 16px;
     font-weight: bold;
@@ -151,6 +219,7 @@ form button {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 form button {
@@ -163,7 +232,6 @@ form button:hover {
     background-color: #1a252f;
 }
 
-/* Om oss.html */
 .about {
     text-align: center;
     margin: 20px auto;
@@ -182,7 +250,6 @@ video {
     border-radius: 8px;
 }
 
-/* recensioner.html */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -206,37 +273,95 @@ tr:nth-child(even) {
 }
 
 @media screen and (max-width: 768px) {
-    /* Gör pizzagalleriet till en kolumn på små skärmar istället för tre */
-    .gallery {
-        grid-template-columns: 1fr; 
-    }
-    
-    /* Lägg meny-kolumnerna under varandra istället för bredvid varandra */
-    .menu-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    .menu-column {
-        width: 90%;
-    }
-    
-    /* Stapla navigationslänkarna */
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
+    nav a {
+        font-size: 16px;
+    }
+    .logo {
+        height: 40px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+    .menu-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu-column {
+        width: 100%;
+    }
+    main h1 {
+        font-size: 28px;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    form {
+        max-width: 100%;
+        margin: 20px 15px;
+    }
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .pizza-image {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+    main h1 {
+        font-size: 24px;
+    }
+    .hero h1 {
+        font-size: 26px;
+    }
+    nav ul {
+        padding: 0 10px;
+    }
+    nav a {
+        font-size: 14px;
+    }
 }
 
 @media print {
-    body {
-        background-color: white;
-        color: black;
+    header {
+        position: static;
+        box-shadow: none;
     }
-    /* Dölj navigation och footer vid utskrift då de inte behövs på papper */
-    header, footer {
+    nav, .gallery, video, form {
         display: none;
     }
-    .hero {
-        margin: 0;
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    main h1 {
+        font-size: 18pt;
+    }
+    main h2 {
+        font-size: 16pt;
+    }
+    table {
+        font-size: 10pt;
+    }
+    th, td {
+        padding: 4pt;
+    }
+    footer {
+        border-top: 1pt solid #000;
+        margin-top: 20pt;
     }
 }
