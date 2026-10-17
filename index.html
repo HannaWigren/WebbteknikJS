@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Pomodoro Pizzeria i Örnsköldsvik – Meny, beställning och information.">
+	<meta name="description" content="Pomodoro Pizzeria i Örnsköldsvik. Meny, beställning och information.">
 	<meta name="author" content="Hanna Vigren">
-	<title>Pomodoro Pizzeria</title>
+	<meta name="keywords" content="pizza, pizzeria, Örnsköldsvik, restaurang, mat, beställning">
+	<title>Pomodoro Pizzeria - Hem</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 	<header>
 		<nav>
 			<ul>
 				<li><a href="index.html"><img src="logo.png" alt="Pomodoro Pizzeria" class="logo"></a></li>
-				<li><a href="index.html">Hem</a></li>
-				<li><a href="meny.html">Meny</a></li>
-				<li><a href="omoss.html">Om oss</a></li>
-				<li><a href="bestall.html">Beställ</a></li>
-				<li><a href="recensioner.html">Recensioner</a></li>
+				<li><a href="index.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Hem</a></li>
+				<li><a href="meny.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Meny</a></li>
+				<li><a href="omoss.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Om oss</a></li>
+				<li><a href="bestall.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Beställ</a></li>
+				<li><a href="recensioner.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Recensioner</a></li>
 			</ul>
 		</nav>
 	</header>
-
 	<main>
 		<section class="hero">
 			<h1>POMODORA</h1>
-			<p>--Restaurang & Pizzeria--</p>
+			<p>Restaurang & Pizzeria</p>
+            <button onclick="showMessage()" style="margin: 20px auto; display: block; padding: 10px 20px; cursor: pointer; background-color: #2c3e50; color: white; border: none; border-radius: 5px;">Visa meddelande (Test)</button>
 		</section>
+
+        <section id="random-pizza-container" style="text-align: center; margin: 20px auto; padding: 20px; background-color: #f9f9f9; max-width: 400px; border-radius: 8px;">
+            <!-- Fylls med JavaScript -->
+        </section>
 
 		<section class="gallery">
 			<h2>Våra populära pizzor</h2>
-			<figure class="pizza-item">
-				<img src="margherita.avif" alt="Pizza Margherita" class="pizza-image">
-				<figcaption>Margherita</figcaption>
-			</figure>
-			<figure class="pizza-item">
-				<img src="vesuvio.avif" alt="Pizza Vesuvio" class="pizza-image">
-				<figcaption>Vesuvio</figcaption>
-			</figure>
-			<figure class="pizza-item">
-				<img src="hawaii.avif" alt="Pizza Hawaii" class="pizza-image">
-				<figcaption>Hawaii</figcaption>
-			</figure>
-			<figure class="pizza-item">
-				<img src="capricciosa.avif" alt="Pizza Capricciosa" class="pizza-image">
-				<figcaption>Capricciosa</figcaption>
-			</figure>
-			<figure class="pizza-item">
-				<img src="opera.avif" alt="Pizza Opera" class="pizza-image">
-				<figcaption>Opera</figcaption>
-			</figure>
-			<figure class="pizza-item">
-				<img src="bolognese.avif" alt="Pizza Bolognese" class="pizza-image">
-				<figcaption>Bolognese</figcaption>
-			</figure>
+			<img src="margherita.avif" alt="Pizza Margherita" class="pizza-image">
+			<img src="vesuvio.avif" alt="Pizza Vesuvio" class="pizza-image">
+			<img src="hawaii.avif" alt="Pizza Hawaii" class="pizza-image">
+			<img src="capricciosa.avif" alt="Pizza Capricciosa" class="pizza-image">
+			<img src="opera.avif" alt="Pizza Opera" class="pizza-image">
+			<img src="bolognese.avif" alt="Pizza Bolognese" class="pizza-image">
 		</section>
-
+		<section class="info-section">
+			<h2>Öppettider</h2>
+			<ul>
+				<li>Måndag till Torsdag: 11:00 till 22:00</li>
+				<li>Fredag till Lördag: 11:00 till 23:00</li>
+				<li>Söndag: 12:00 till 21:00</li>
+			</ul>
+			<h2>Kontakt</h2>
+			<p>Telefon: <a href="tel:060-123456">060-123456</a></p>
+			<p>E-post: <a href="mailto:info@pomodoro.se">info@pomodoro.se</a></p>
+			<p>Adress: Storgatan 1, 891 33 Örnsköldsvik</p>
+		</section>
 	</main>
-
-
 	<footer>
-		<p>&copy; 2025 Pomodoro Pizzeria</p>
+		<p>&copy; 2026 Pomodoro Pizzeria</p>
 	</footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
