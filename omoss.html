@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Lär känna Pomodoro Pizzeria och vår historia.">
 	<meta name="author" content="Hanna Vigren">
+	<meta name="keywords" content="om oss, historia, kontakt, adress">
 	<title>Om oss - Pomodoro Pizzeria</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 	<header>
 		<nav>
 			<ul>
 				<li><a href="index.html"><img src="logo.png" alt="Pomodoro Pizzeria" class="logo"></a></li>
-				<li><a href="index.html">Hem</a></li>
-				<li><a href="meny.html">Meny</a></li>
-				<li><a href="omoss.html">Om oss</a></li>
-				<li><a href="bestall.html">Beställ</a></li>
-				<li><a href="recensioner.html">Recensioner</a></li>
+				<li><a href="index.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Hem</a></li>
+				<li><a href="meny.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Meny</a></li>
+				<li><a href="omoss.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Om oss</a></li>
+				<li><a href="bestall.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Beställ</a></li>
+				<li><a href="recensioner.html" onmouseover="highlightNav(this)" onmouseout="unhighlightNav(this)">Recensioner</a></li>
 			</ul>
 		</nav>
 	</header>
-
 	<main>
 		<section class="hero">
 			<h1>POMODORA</h1>
-			<p>--Restaurang & Pizzeria--</p>
+			<p>Restaurang & Pizzeria</p>
 		</section>
-
 		<section class="about">
 			<h2>Om oss</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-				dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-				ex ea commodo consequat.</p>
-
+			<p>Pomodoro Pizzeria har serverat autentisk italiensk pizza i Örnsköldsvik sedan 1985. Vi använder endast de finaste ingredienserna och följer traditionella italienska recept som har gått i arv genom generationer.</p>
+			<h3>Vår historia</h3>
+			<p>Det började med en dröm om att sprida den äkta italienska pizzan till Sverige. Vår grundare, Giuseppe Rossi, kom till Örnsköldsvik från Napoli med sina hemliga recept och passion för matlagning.</p>
+			<h3>Våra värderingar</h3>
+			<ul>
+				<li>Färska ingredienser varje dag</li>
+				<li>Traditionella italienska metoder</li>
+				<li>Vänlig och professionell service</li>
+				<li>Miljövänliga förpackningar</li>
+			</ul>
 			<div class="video-column">
+				<h3>Se oss arbeta</h3>
 				<video controls>
 					<source src="pizzavideo.mp4" type="video/mp4">
 					Din webbläsare stödjer inte video.
 				</video>
 			</div>
-
-			<a href="https://maps.app.goo.gl/wFTH4oUjfj4u2DtQ8" class="map-link" target="_blank">Hitta hit</a>
+			<h3>Hitta oss</h3>
+			<p>Vi ligger mitt i Örnsköldsviks centrum, lätt att hitta och med bra parkeringsmöjligheter.</p>
+			<a href="https://maps.app.goo.gl/wFTH4oUjfj4u2DtQ8" class="map-link" target="_blank">Visa på karta</a>
 		</section>
 	</main>
-
 	<footer>
-		<p>&copy; 2025 Pomodoro Pizzeria</p>
+		<p>&copy; 2026 Pomodoro Pizzeria</p>
 	</footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
