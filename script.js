@@ -15,9 +15,9 @@ function showRandomPizza() {
     const randomIndex = Math.floor(Math.random() * pizzas.length);
     const container = document.getElementById("random-pizza-container");
     
-    if (container) {
+   if (container) {
         container.innerHTML = `
-            <h2>Dagens tips!</h2>
+            <h2>Slumpad pizza</h2>
             <p>Vi rekommenderar: <strong>${pizzas[randomIndex].name}</strong></p>
             <img src="${pizzas[randomIndex].img}" alt="${pizzas[randomIndex].name}" style="width:100%; border-radius:8px;">
         `;
