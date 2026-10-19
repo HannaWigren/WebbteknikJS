@@ -1,3 +1,4 @@
+/* Globala stilar */
 * {
     box-sizing: border-box;
 }
@@ -54,6 +55,7 @@ main {
     padding: 20px 0;
 }
 
+/* Gemensamma stilar */
 main h1 {
     text-align: center;
     font-size: 32px;
@@ -75,6 +77,7 @@ form {
     margin: 20px auto;
 }
 
+/* index.html */
 .hero {
     text-align: center;
     margin: 20px auto;
@@ -148,6 +151,7 @@ form {
     text-decoration: underline;
 }
 
+/* meny.html */
 .menu-group {
     display: flex;
     justify-content: space-around;
@@ -167,21 +171,25 @@ form {
 .menu-column ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .menu-column li {
     margin-bottom: 15px;
     font-size: 16px;
+    text-align: center;
 }
 
 .menu-column li strong {
     font-size: 18px;
+    text-align: center;
 }
 
 .other-menu {
     margin: 40px auto;
     max-width: 800px;
     padding: 0 20px;
+    text-align: center;
 }
 
 .other-menu h2 {
@@ -194,19 +202,23 @@ form {
     font-size: 20px;
     margin: 20px 0 10px 0;
     color: #2c3e50;
+    text-align: center;
 }
 
 .other-menu ul {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .other-menu li {
     margin-bottom: 8px;
     font-size: 16px;
+    text-align: center;
 }
 
+/* bestall.html */
 form label {
     font-size: 16px;
     font-weight: bold;
@@ -232,6 +244,7 @@ form button:hover {
     background-color: #1a252f;
 }
 
+/* Om oss.html */
 .about {
     text-align: center;
     margin: 20px auto;
@@ -243,6 +256,12 @@ form button:hover {
     margin-bottom: 20px;
 }
 
+.about ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
 video {
     width: 100%;
     height: 300px;
@@ -250,6 +269,7 @@ video {
     border-radius: 8px;
 }
 
+/* recensioner.html */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -272,42 +292,53 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+/* Responsivitet - Media Queries */
 @media screen and (max-width: 768px) {
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
+    
     nav a {
         font-size: 16px;
     }
+    
     .logo {
         height: 40px;
     }
+    
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         padding: 15px;
     }
+    
     .menu-group {
         flex-direction: column;
         gap: 20px;
     }
+    
     .menu-column {
         width: 100%;
     }
+    
     main h1 {
         font-size: 28px;
     }
+    
     .hero h1 {
         font-size: 30px;
     }
+    
     form {
         max-width: 100%;
         margin: 20px 15px;
     }
+    
     table {
         font-size: 14px;
     }
+    
     th, td {
         padding: 8px;
     }
@@ -317,49 +348,62 @@ tr:nth-child(even) {
     .gallery {
         grid-template-columns: 1fr;
     }
+    
     .pizza-image {
         max-width: 300px;
         margin: 0 auto;
         display: block;
     }
+    
     main h1 {
         font-size: 24px;
     }
+    
     .hero h1 {
         font-size: 26px;
     }
+    
     nav ul {
         padding: 0 10px;
     }
+    
     nav a {
         font-size: 14px;
     }
 }
 
+/* Utskriftsstilar */
 @media print {
     header {
         position: static;
         box-shadow: none;
     }
+    
     nav, .gallery, video, form {
         display: none;
     }
+    
     body {
         font-size: 12pt;
         line-height: 1.4;
     }
+    
     main h1 {
         font-size: 18pt;
     }
+    
     main h2 {
         font-size: 16pt;
     }
+    
     table {
         font-size: 10pt;
     }
+    
     th, td {
         padding: 4pt;
     }
+    
     footer {
         border-top: 1pt solid #000;
         margin-top: 20pt;
